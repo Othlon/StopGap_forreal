@@ -33,7 +33,7 @@ public class StopGap {
         othlon.stopgap.items.SGItems.init();
         othlon.stopgap.items.SGItems.recipebook();
 
-        EntityPlayer par2EntityPlayer
+        EntityPlayer par2EntityPlayer;
 
     }//end pre init
 }//StopGap

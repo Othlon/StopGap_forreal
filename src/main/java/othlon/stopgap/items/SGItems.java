@@ -29,7 +29,7 @@ public static Block blockFlint;
         blockFlint = new SGFlintBlock();
 
 
-        GameRegistry.registerBlock(blockFlint, "stopgap:BlockFlint");
+        GameRegistry.registerBlock(blockFlint, "BlockFlint");
 
 
          /* REDSTONE */
@@ -37,14 +37,14 @@ public static Block blockFlint;
             ingotRed = new SGIngot()
                     .setUnlocalizedName("Red Ingot")
                     .setCreativeTab(othlon.stopgap.StopGap.getCreativeTab())
-                    .setTextureName("stopgap:red_ingot");
+                    .setTextureName("red_ingot");
 
             GameRegistry.registerItem(ingotRed, "stopgap:ingotRed");
 
             mixRed = new SGMixture()
                     .setUnlocalizedName("Red Mixture")
                     .setCreativeTab(othlon.stopgap.StopGap.getCreativeTab())
-                    .setTextureName("stopgap:red_mix");
+                    .setTextureName("red_mix");
             GameRegistry.registerItem(mixRed, "mixRed");
 
             OreDictionary.registerOre("ingotRedstone", ingotRed);
@@ -55,13 +55,13 @@ public static Block blockFlint;
             ingotGlow = new SGIngot()
                     .setUnlocalizedName("Glow Ingot")
                     .setCreativeTab(othlon.stopgap.StopGap.getCreativeTab())
-                    .setTextureName("stopgap:glow_ingot");
+                    .setTextureName("glow_ingot");
             GameRegistry.registerItem(ingotGlow, "ingotGlow");
 
             mixGlow = new SGMixture()
                     .setUnlocalizedName("Glow Mixture")
                     .setCreativeTab(othlon.stopgap.StopGap.getCreativeTab())
-                    .setTextureName("stopgap:glow_mix");
+                    .setTextureName("glow_mix");
             GameRegistry.registerItem(mixGlow, "mixGlow");
 
             OreDictionary.registerOre("ingotGlowstone", ingotGlow);
