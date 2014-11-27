@@ -31,7 +31,7 @@ public class StopGap {
         othlon.stopgap.items.SGItems.registerItems();
         othlon.stopgap.blocks.SGBlocks.registerBlocks();
 
-        SGCookbook.recipebook();
+        SGCookbook.recipes();
 
         EntityPlayer par2EntityPlayer;
 

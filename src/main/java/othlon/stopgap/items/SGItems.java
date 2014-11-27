@@ -16,17 +16,15 @@ import othlon.stopgap.blocks.SGFlintBlock;
 
 public class  SGItems {
 
-public static Item  ingotRed;
-public static Item  mixRed;
-public static Item  ingotGlow;
-public static Item  mixGlow;
+    public static Item ingotRed;
+    public static Item mixRed;
+    public static Item ingotGlow;
+    public static Item mixGlow;
 
 
-
-    public static void registerItems()
-    {
+    public static void registerItems() {
          /* REDSTONE */
-        if(SGConfig.canMakeOwnRedstone) {
+        if (SGConfig.canMakeOwnRedstone) {
             String redName = "red";
 
             ingotRed = new SGIngot(redName);
@@ -38,7 +36,7 @@ public static Item  mixGlow;
         }
 
         /* GLOWSTONE */
-        if(SGConfig.canMakeOwnGlowstone) {
+        if (SGConfig.canMakeOwnGlowstone) {
             String glowName = "glow";
 
             ingotGlow = new SGIngot(glowName);
@@ -46,8 +44,8 @@ public static Item  mixGlow;
             OreDictionary.registerOre("ingotGlow", ingotGlow);
 
             mixGlow = new SGMixture(glowName);
-        }
-   }// init
+            GameRegistry.registerItem(mixGlow, "mixGlow");
+        }// init
 
-
-}//end class
+    }
+}

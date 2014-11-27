@@ -24,74 +24,8 @@ public class SGCookbook {
     public static Item  mixGlow;
     public static Block blockFlint;
 
-
-
-    public void recipes(){
-        //ingredients
+    public static void recipes(){
         /*~~~~~Ingredients for Recipes!~~~~~*/
-
-
-        ItemStack redMixStack    = new ItemStack(mixRed);
-        ItemStack redIngotStack  = new ItemStack(ingotRed);
-
-        ItemStack redStoneStack   = new ItemStack(Items.redstone, 4);
-        ItemStack redBlockStack   = new ItemStack(Blocks.redstone_block, 4);
-
-
-        ItemStack flintStack      = new ItemStack(Items.flint);
-        ItemStack ironIngotStack  = new ItemStack(Items.iron_ingot);
-        ItemStack sandStack       = new ItemStack(Blocks.sand);
-        ItemStack redDyeStack     = new ItemStack(Items.dye, 1 ,1);
-
-
-        ItemStack glowMixStack    = new ItemStack(mixGlow);
-        ItemStack glowIngotStack  = new ItemStack(ingotGlow);
-        ItemStack glowStoneStack  = new ItemStack(Items.glowstone_dust, 4);
-        ItemStack glowBlockStack  = new ItemStack(Blocks.glowstone, 4);
-
-        //flint also used here
-        ItemStack goldIngotStack  = new ItemStack(Items.gold_ingot);
-        ItemStack soulSandStack   = new ItemStack(Blocks.soul_sand);
-        ItemStack yellowDyeStack  = new ItemStack(Items.dye, 1 ,11);
-
-
-
-        //clay shopping list
-        ItemStack clayBallStack     = new ItemStack(Items.clay_ball, 4);
-        ItemStack clayBlockStack    = new ItemStack(Blocks.clay);
-        ItemStack clayBlocksStack    = new ItemStack(Blocks.clay, 4);
-
-        ItemStack dirtBlockStack    = new ItemStack(Blocks.dirt);
-        ItemStack sandBlockStack    = new ItemStack(Blocks.sand);
-        ItemStack waterBucketStack  = new ItemStack(Items.water_bucket);
-
-        //flint stacks
-        ItemStack flintsStack       = new ItemStack(Items.flint, 9);
-        ItemStack flintBlockStack   = new ItemStack(blockFlint);
-        ItemStack gravelStack       = new ItemStack(Blocks.gravel);
-
-        //uses waterBucketStack
-
-        //Wool to string
-        ItemStack woolStack         = new ItemStack(Blocks.wool, 1, OreDictionary.WILDCARD_VALUE);
-        ItemStack stringStack       = new ItemStack(Items.string, 4);
-
-        ItemStack bowlStack         = new ItemStack(Items.bowl);
-        ItemStack stickStack        = new ItemStack(Items.stick);
-
-        //items
-
-        //blocks
-
-
-
-    }
-
-    public static void recipebook()
-    {
-	    	/*~~~~~Ingredients for Recipes!~~~~~*/
-
-
         ItemStack redMixStack    = new ItemStack(mixRed);
         ItemStack redIngotStack  = new ItemStack(ingotRed);
 
@@ -141,11 +75,12 @@ public class SGCookbook {
         ItemStack stickStack        = new ItemStack(Items.stick);
 
 
-/* REDSTONE RECIPES */
+        /* REDSTONE RECIPES */
         if(SGConfig.canMakeOwnRedstone)
         {
             //Making: red mixture
-            GameRegistry.addShapelessRecipe(redMixStack,
+            GameRegistry.addShapelessRecipe(
+                    redMixStack, //result
                     flintStack, ironIngotStack, sandStack, redDyeStack);
 
             //Making: red ingot
@@ -163,7 +98,9 @@ public class SGCookbook {
                             "xxx",
                             'x', "ingotRedstone"));
         }
-/* GLOWSTONE RECIPES */
+
+
+        /* GLOWSTONE RECIPES */
         if(SGConfig.canMakeOwnGlowstone) {
             //Making: Glow Mixture
             GameRegistry.addShapelessRecipe(glowMixStack,
@@ -184,7 +121,7 @@ public class SGCookbook {
                     'x', glowIngotStack);
         }
 
-/* CLAY RECIPES */
+        /* CLAY RECIPES */
         if(SGConfig.canCraftClayBlock)
         {
             //Making: clay block
@@ -211,7 +148,9 @@ public class SGCookbook {
             GameRegistry.addShapelessRecipe(clayBallStack,
                     clayBlockStack);
         }
-/* FLINT RECIPES */
+
+
+        /* FLINT RECIPES */
         if(SGConfig.canPanFlint) {
             //Making: flint from gravel and water
             GameRegistry.addShapedRecipe(flintStack,
@@ -234,7 +173,7 @@ public class SGCookbook {
             GameRegistry.addShapelessRecipe(flintsStack, flintBlockStack);
         }
 
-/* WOOL AND STRING RECIPES */
+        /* WOOL AND STRING RECIPES */
         if(SGConfig.canSpinString) {
             //Making: wool back to string
             GameRegistry.addRecipe(new ShapedOreRecipe(stringStack,
@@ -246,7 +185,7 @@ public class SGCookbook {
                     'z', bowlStack
             ));
         }
-//SAPLING STICKS
+        //SAPLING STICKS
 
         if(SGConfig.canSticksSromSaplings) {
 
@@ -254,6 +193,6 @@ public class SGCookbook {
 
         }
 
-//NETHER WART?
+        //NETHER WART?
     }//recipe book
 }
