@@ -3,9 +3,7 @@ package othlon.stopgap;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.Mod;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
-import othlon.stopgap.items.SGTab;
 
 
 @SuppressWarnings("ClassNamePrefixedWithPackageName")
@@ -30,8 +28,10 @@ public class StopGap {
 
         SGConfig.configurating(event.getSuggestedConfigurationFile());
         othlon.stopgap.backslab.vanilla.SGBSVanilla.okgo(SGConfig.canUnslabCobble, SGConfig.canUnslabWood);
-        othlon.stopgap.items.SGItems.init();
-        othlon.stopgap.items.SGItems.recipebook();
+        othlon.stopgap.items.SGItems.registerItems();
+        othlon.stopgap.blocks.SGBlocks.registerBlocks();
+
+        SGCookbook.recipebook();
 
         EntityPlayer par2EntityPlayer;
 
